@@ -1,0 +1,31 @@
+public class Dungeon_Game {
+
+	public static void main(String[] args) {
+		
+    Scanner sc = new Scanner(System.in);
+
+      System.out.println("Enter The Row And Column :  ");
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+
+       System.out.println("Enter The Adventure Row And Column : ");
+        int advR = sc.nextInt();
+        int advC = sc.nextInt();
+
+        System.out.println("Enter The Gold Row and Column : ");
+        int goldR = sc.nextInt();
+        int goldC = sc.nextInt();
+
+        int steps = getAdvMinSteps(row, col, advR, advC, goldR, goldC);
+        System.out.println("Minimum number of steps: " + steps);
+    }
+
+    
+    private static int getAdvMinSteps(int row, int col, int advR, int advC, int goldR, int goldC) {
+
+        return (Math.abs(advR - goldR)+ Math.abs(advC - goldC));
+    }
+
+
+
+	}
